@@ -47,6 +47,11 @@ class FeedbackInsert extends Component {
         this.setState({ name })
     }
 
+    handleChangeInputEmail = async event => {
+        const email = event.target.value
+        this.setState({ email })
+    }
+
     handleChangeInputRating = async event => {
         const rating = event.target.validity.valid
             ? event.target.value
@@ -55,6 +60,10 @@ class FeedbackInsert extends Component {
         this.setState({ rating })
     }
 
+    handleChangeInputComment = async event => {
+        const comment = event.target.value
+        this.setState({ comment })
+    }
     handleChangeInputTime = async event => {
         const time = event.target.value
         this.setState({ time })
@@ -79,6 +88,7 @@ class FeedbackInsert extends Component {
 
     render() {
         const { name, email, rating, comment, time } = this.state
+        
         return (
             <Wrapper>
                 <Title>Create Feedback</Title>
@@ -94,7 +104,7 @@ class FeedbackInsert extends Component {
                 <InputText
                     type="email"
                     value={email}
-                    onChange={this.handleChangeInputName}
+                    onChange={this.handleChangeInputEmail}
                 />
                 <Label>Rating: </Label>
                 <InputText
@@ -111,7 +121,7 @@ class FeedbackInsert extends Component {
                 <InputText
                     type="text"
                     value={comment}
-                    onChange={this.handleChangeInputName}
+                    onChange={this.handleChangeInputComment}
                 />
 
                 <Label>Time: </Label>

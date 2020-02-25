@@ -1,8 +1,5 @@
 const Feedback = require('../models/feedback-model')
 
-// router.post('/feedback', FeedbackCtrl.createFeedback)
-
-
 createFeedback = (req, res) => {
     const body = req.body
 

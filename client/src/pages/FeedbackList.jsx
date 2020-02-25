@@ -13,6 +13,8 @@ const Wrapper = styled.div`
     padding: 0 40px 40px 40px;
 `
 
+
+
 class FeedbackList extends Component {
     constructor(props) {
         super(props)
@@ -36,7 +38,7 @@ class FeedbackList extends Component {
 
     render() {
         const { feedbacks, isLoading } = this.state
-        console.log('TCL: FeedbackList -> render -> movies', feedbacks)
+        console.log('TCL: FeedbackList -> render -> feedbacks', feedbacks)
 
         const columns = [
             {
@@ -67,7 +69,7 @@ class FeedbackList extends Component {
             {
                 Header: 'Time',
                 accessor: 'time',
-                Cell: props => <span>{props.value.join(' / ')}</span>,
+                //Cell: props => <span>{props.value.join(' ./ ')}</span>,
             },
         ]
 
