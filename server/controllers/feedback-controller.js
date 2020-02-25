@@ -1,5 +1,8 @@
 const Feedback = require('../models/feedback-model')
 
+// router.post('/feedback', FeedbackCtrl.createFeedback)
+
+
 createFeedback = (req, res) => {
     const body = req.body
 
@@ -33,9 +36,10 @@ createFeedback = (req, res) => {
         })
 }
 
+// router.get('/feedback/:id', FeedbackCtrl.getFeedbackById)
 
 getFeedbackById = async (req, res) => {
-    await Feedback.findOne({ _id: req.params.id }, (err, movie) => {
+    await Feedback.findOne({ _id: req.params.id }, (err, feedback) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }
