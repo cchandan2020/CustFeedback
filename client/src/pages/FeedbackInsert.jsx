@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import api from '../api'
 
+import {globalCustomer} from '../Services/global'
+
+//mit library
+// import StarRating from 'react-star-rating';
+
 import styled from 'styled-components'
 
 const Title = styled.h1.attrs({
@@ -60,6 +65,8 @@ class FeedbackInsert extends Component {
         this.setState({ rating })
     }
 
+    // put star rating handler 
+
     handleChangeInputComment = async event => {
         const comment = event.target.value
         this.setState({ comment })
@@ -73,6 +80,9 @@ class FeedbackInsert extends Component {
         const { name, email, rating, comment, time } = this.state
         const arrayTime = time.split('/')
         const payload = { name, email, rating, comment, time: arrayTime }
+
+        globalCustomer.push(payload)
+        console.log('This is global customer: \n', globalCustomer)
 
         await api.insertFeedback(payload).then(res => {
             window.alert(`Feedback added successfully`)
@@ -117,6 +127,13 @@ class FeedbackInsert extends Component {
                     value={rating}
                     onChange={this.handleChangeInputRating}
                 />
+
+                    
+                
+
+                {/* <StarRating name="react-star-rating" caption="Rate this component!" totalStars={5} />
+                <button type="submit" className="btn btn-primary">Submit Rating</button> */}
+
                 <Label>Comment: </Label>
                 <InputText
                     type="text"

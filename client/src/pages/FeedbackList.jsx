@@ -4,15 +4,11 @@ import ReactTable from 'react-table-v6'
 // added version 6 to fix the issue -
 
 import api from '../api'
-
 import styled from 'styled-components'
-
 import 'react-table-v6/react-table.css'
-
 const Wrapper = styled.div`
     padding: 0 40px 40px 40px;
 `
-
 
 
 class FeedbackList extends Component {

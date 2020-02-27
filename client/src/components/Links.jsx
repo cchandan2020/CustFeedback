@@ -24,6 +24,11 @@ class Links extends Component {
                 <Collapse>
                     <List>
                         <Item>
+                            <Link to="/feedbacks/Test" className="nav-link">
+                                Test 
+                            </Link>
+                        </Item>
+                        <Item>
                             <Link to="/feedbacks/create" className="nav-link">
                                 Create New Feedback 
                             </Link>
