@@ -18,15 +18,15 @@ class Links extends Component {
     render() {
         return (
             <React.Fragment>
-                <Link to="/" className="navbar-brand">
+                {/* <Link to="/" className="navbar-brand">
                     Customer Feedback Application 
                     
-                </Link>
+                </Link> */}
                 <Collapse>
                     <List>
                         <Item>
                             <Link to="/feedbacks/Home" className="nav-link">
-                                Home 
+                                Customer Feedback Application 
                             </Link>
                         </Item>
                         {/* <Item>

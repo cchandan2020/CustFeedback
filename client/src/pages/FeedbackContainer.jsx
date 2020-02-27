@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import { FeedbackInsert, FeedbackList } from './index'
-
-//import api from '../api'
-
-//mit library
-// import StarRating from 'react-star-rating';
+import './index.css';
 
 //import styled from 'styled-components'
 
@@ -14,14 +10,24 @@ class FeedbackContainer extends Component {
     }
 
     render(){
-
         return(
-            <div>
+            <container1>
+            <div className = 'container1'>
                 <FeedbackInsert />
-                <FeedbackList />
             </div>
+
+            {/* <div className = 'container1'>
+                <FeedbackInsert />
+            </div> */}
+           
+            <div className ='container1'>
+                <FeedbackList />
+             </div>
+            </container1>
         )
        }
+
+
 }
 
 export default FeedbackContainer

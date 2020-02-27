@@ -1,0 +1,16 @@
+.container1{
+    border: 2px solid red;
+    display: grid;
+    /* grid-template-columns: 2fr 1fr 4fr;  */
+    grid-template-columns: 1fr 1fr 1r ;
+    flex:2
+    
+}
+    
+
+.item{
+    border: 1px solid blue;
+    font-size: 30px;
+    flex:3;
+    margin:10px;
+}

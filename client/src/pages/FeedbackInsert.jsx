@@ -3,8 +3,10 @@ import api from '../api'
 
 import {globalCustomer} from '../Services/global'
 
-//mit library
-// import StarRating from 'react-star-rating';
+//importing star libs
+import Rater from 'react-rater'
+import 'react-rater/lib/react-rater.css'
+
 
 import styled from 'styled-components'
 
@@ -65,7 +67,7 @@ class FeedbackInsert extends Component {
         this.setState({ rating })
     }
 
-    // put star rating handler 
+    
 
     handleChangeInputComment = async event => {
         const comment = event.target.value
@@ -77,9 +79,13 @@ class FeedbackInsert extends Component {
     }
 
     handleIncludeFeedback = async () => {
+
+        
+        //onRating: function({ rating })
+
         const { name, email, rating, comment, time } = this.state
         const arrayTime = time.split('/')
-        const payload = { name, email, rating, comment, time: arrayTime }
+        const payload = { name, email,rating, comment, time: arrayTime }
 
         globalCustomer.push(payload)
         console.log('This is global customer: \n', globalCustomer)
@@ -118,6 +124,10 @@ class FeedbackInsert extends Component {
                     onChange={this.handleChangeInputEmail}
                 />
                 <Label>Rating: </Label>
+                    {/* <Rater total={5} rating={2} /> */}
+                    <Rater total={5} rating={2} />
+                    {/* value = {rating} */}
+
                 <InputText
                     type="number"
                     step="0.1"
@@ -129,12 +139,10 @@ class FeedbackInsert extends Component {
                     onChange={this.handleChangeInputRating}
                 />
 
-                    
-                
+                {/* <Rater total={5} rating={2} /> */}
 
-                {/* <StarRating name="react-star-rating" caption="Rate this component!" totalStars={5} />
-                <button type="submit" className="btn btn-primary">Submit Rating</button> */}
-
+                {/* <Rater onRate={({rating}) => {}}/> */}
+                <label> </label>
                 <Label>Comment: </Label>
                 <InputText
                     type="text"
