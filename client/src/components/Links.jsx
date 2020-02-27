@@ -24,11 +24,11 @@ class Links extends Component {
                 <Collapse>
                     <List>
                         <Item>
-                            <Link to="/feedbacks/Test" className="nav-link">
-                                Test 
+                            <Link to="/feedbacks/Home" className="nav-link">
+                                Home 
                             </Link>
                         </Item>
-                        <Item>
+                        {/* <Item>
                             <Link to="/feedbacks/create" className="nav-link">
                                 Create New Feedback 
                             </Link>
@@ -37,7 +37,7 @@ class Links extends Component {
                             <Link to="/feedbacks/list" className="nav-link">
                                 List Feedbacks 
                             </Link>
-                        </Item>
+                        </Item> */}
                     </List>
                 </Collapse>
             </React.Fragment>

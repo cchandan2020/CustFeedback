@@ -13,7 +13,7 @@ function App() {
         <Router>
             <NavBar />
             <Switch>
-                <Route path="/feedbacks/Test" exact component={FeedbackContainer} />
+                <Route path="/feedbacks/Home" exact component={FeedbackContainer} />
 
                 <Route path="/feedbacks/list" exact component={FeedbackList} />
                 <Route path="/feedbacks/create" exact component={FeedbackInsert} />

@@ -8,7 +8,8 @@ import {globalCustomer} from '../Services/global'
 
 
 import api from '../api'
-import styled, { ThemeConsumer } from 'styled-components'
+// import styled, { ThemeConsumer } from 'styled-components'
+import styled from 'styled-components'
 import 'react-table-v6/react-table.css'
 const Wrapper = styled.div`
     padding: 0 40px 40px 40px;
