@@ -97,11 +97,12 @@ class FeedbackInsert extends Component {
     }
 
     render() {
-        const { name, email, rating, comment, time } = this.state
+        //const { name, email, rating, comment, time } = this.state
+        const { name, email, rating, comment } = this.state
         
         return (
             <Wrapper>
-                <Title>Create Feedback</Title>
+                <Title>Add new feedback</Title>
 
                 <Label>Name: </Label>
                 <InputText
@@ -141,12 +142,12 @@ class FeedbackInsert extends Component {
                     onChange={this.handleChangeInputComment}
                 />
 
-                <Label>Time: </Label>
+                {/* <Label>Time: </Label>
                 <InputText
                     type="text"
                     value={time}
                     onChange={this.handleChangeInputTime}
-                />
+                /> */}
 
                 <Button onClick={this.handleIncludeFeedback}>Add Feedback</Button>
                 

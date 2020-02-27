@@ -8,7 +8,6 @@ import {globalCustomer} from '../Services/global'
 
 
 import api from '../api'
-// import styled, { ThemeConsumer } from 'styled-components'
 import styled from 'styled-components'
 import 'react-table-v6/react-table.css'
 const Wrapper = styled.div`
@@ -56,9 +55,14 @@ class FeedbackList extends Component {
         console.log('TCL: FeedbackList -> render -> feedbacks', feedbacks)
 
         const columns = [
+            // {
+            //     Header: 'ID',
+            //     accessor: '_id',
+            //     filterable: true,
+            // },
             {
-                Header: 'ID',
-                accessor: '_id',
+                Header: 'Rating',
+                accessor: 'rating',
                 filterable: true,
             },
             {
@@ -72,20 +76,15 @@ class FeedbackList extends Component {
                 filterable: true,
             },
             {
-                Header: 'Rating',
-                accessor: 'rating',
-                filterable: true,
-            },
-            {
                 Header: 'Comment',
                 accessor: 'comment',
                 filterable: true,
             },
-            {
-                Header: 'Time',
-                accessor: 'time',
-                //Cell: props => <span>{props.value.join(' ./ ')}</span>,
-            },
+            // {
+            //     Header: 'Time',
+            //     accessor: 'time',
+            //     //Cell: props => <span>{props.value.join(' ./ ')}</span>,
+            // },
         ]
 
         let showTable = true
@@ -94,6 +93,7 @@ class FeedbackList extends Component {
         }
 
         return (
+            
             <Wrapper>
                 {showTable && (
                     <ReactTable
