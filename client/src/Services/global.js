@@ -1,4 +1,4 @@
-const globalCustomer = []
+let globalCustomer = []
 
 // export default globalCustomer 
 

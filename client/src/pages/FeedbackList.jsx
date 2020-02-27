@@ -3,8 +3,12 @@ import ReactTable from 'react-table-v6'
 //var ReactTable = require('react-table-v6').default
 // added version 6 to fix the issue -
 
+import {globalCustomer} from '../Services/global'
+
+
+
 import api from '../api'
-import styled from 'styled-components'
+import styled, { ThemeConsumer } from 'styled-components'
 import 'react-table-v6/react-table.css'
 const Wrapper = styled.div`
     padding: 0 40px 40px 40px;
@@ -22,15 +26,29 @@ class FeedbackList extends Component {
     }
 
     componentDidMount = async () => {
-        this.setState({ isLoading: true })
+        
+       // this.setState({ isLoading: false, feedbacks: globalCustomer })
+        console.log ('This is global customer before didmount - \n',globalCustomer);
+        
+
+        let gCust = globalCustomer
 
         await api.getAllFeedbacks().then(feedbacks => {
+            gCust = feedbacks.data.data
+
             this.setState({
-                feedbacks: feedbacks.data.data,
+                feedbacks: gCust,
                 isLoading: false,
             })
         })
     }
+
+    // async componentWillUpdate  (){
+    //     this.setState({ 
+    //             feedbacks: globalCustomer,
+    //             isLoading: false 
+    //     })
+    // }
 
     render() {
         const { feedbacks, isLoading } = this.state

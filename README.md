@@ -1,7 +1,10 @@
+
+# **  Work in Progress - Please do not fork it just yet. Watch this space **
+
 # Customer Feedback Application 
 ````
 Prepared by Chandan Chowdhury
-Work in Progress 
-Do not work on this project
-Watch this space 
+
 ````
+
+
