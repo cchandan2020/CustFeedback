@@ -17,7 +17,7 @@ class FeedbackContainer extends Component {
             </div>
 
              <div className = 'container1'>
-                <FeedbackList />
+                <FeedbackList reload/>|
             </div> 
 
             <div className ='container1'>

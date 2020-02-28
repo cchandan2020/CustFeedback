@@ -60,11 +60,15 @@ class FeedbackInsert extends Component {
     }
 
     handleChangeInputRating = async event => {
-        const rating = event.target.validity.valid
-            ? event.target.value
-            : this.state.rating
+        // const rating = event.target.validity.valid
+        //     ? event.target.value
+        //     : this.state.rating
+        console.log(event)
+        let rating = event.rating
+        
 
         this.setState({ rating })
+        console.log("This ..",rating)
     }
     
 
@@ -131,13 +135,14 @@ class FeedbackInsert extends Component {
                     onChange={this.handleChangeInputComment}
                 />
                 <Label>Rating: </Label>
-                    <Rater total={5} rating={2} />
+                    <Rater total={5} rating={rating} onRate={this.handleChangeInputRating}/>
+                    
                     {/* <Rater total ={5} onRate={function({rating})}/> */}
                     {/* <Rater total={5} rating= /> */}
                     {/* <Rater total={5} rating={2} /> */}
                     {/* value{rating} = onRate */}
                     
-                <InputText
+                {/* <InputText
                     type="number"
                     // step="0.1"
                     lang="en-US"
@@ -146,7 +151,7 @@ class FeedbackInsert extends Component {
                     pattern="[0-9]+([,\.][0-9]+)?"
                     value={rating}
                     onChange={this.handleChangeInputRating}
-                />
+                /> */}
 
                 {/* <Rater total={5} rating={2} /> */}
                 {/* <Rater onRate={({rating}) => {}}/> */}

@@ -29,16 +29,7 @@ class Links extends Component {
                                 Customer Feedback Application 
                             </Link>
                         </Item>
-                        {/* <Item>
-                            <Link to="/feedbacks/create" className="nav-link">
-                                Create New Feedback 
-                            </Link>
-                        </Item>
-                        <Item>
-                            <Link to="/feedbacks/list" className="nav-link">
-                                List Feedbacks 
-                            </Link>
-                        </Item> */}
+                        
                     </List>
                 </Collapse>
             </React.Fragment>
