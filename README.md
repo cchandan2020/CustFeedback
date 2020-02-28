@@ -6,13 +6,17 @@ Customer Feedback Application is a MERN stack application, dealing with collecti
 This is a SAMPLE app that is meant to demonstrate how to develop, build, test and deploy a MERN stack app. 
 
 ## Tools / libraries 
-##### MERN stack 
+#### MERN stack 
 
 * MongoDB - https://www.mongodb.com/ 
+A document-based open source database, that provides you scalability and flexibility.
 * ExpressJS - https://expressjs.com/ 
+A structured base designed to develop web applications and APIs.
 * ReactJS - https://reactjs.org/ 
-* NodeJS - https://nodejs.org/en/  
+A Javascript Front-end library for building user interfaces. Maintained by Facebook.
+* NodeJS - https://nodejs.org/en/  A javascript runtime built on Chrome’s V8 JS engine.
 
+#### Other key tools 
 * Build Tool - Travis CI (Not fully implemented)
 * Deployment - Heroku (Not implemented yet)
 
@@ -23,13 +27,27 @@ This is a SAMPLE app that is meant to demonstrate how to develop, build, test an
 * View Chart showing a trend of ratings (1-5)
 
 ## Installation
-Clone the repository 
 
+#### Clone the repository 
 ```` bash
-$ git clone https://github.com/cchandan2020/CustFeedback 
+$ cd <project directory>
+$ git clone https://github.com/cchandan2020/CustFeedback
+$ cd <CustFeedback directory>
+$ npm install express body-parser cors mongoose nodemon 
 ````
+#### Install MongoDB 
+````
+$ brew tap mongodb/brew
+$ brew install mongodb-community
+$ brew services start mongodb-community
+If you have a previous version of mongodb
+$ brew services stop mongodb
+$ brew uninstall mongodb
 
-
+$ brew tap mongodb/brew
+$ brew install mongodb-community
+$ brew services start mongodb-community
+````
 ### Start the Client 
 ````
 $cd CustomerFeedback/client 
@@ -44,19 +62,20 @@ $node server.js
 ## Build with TravisCI 
 ```` bash
 $npm build 
+[ WORK IN progress]
 
 ````
 
 ## Backlog
 
-* Build scripts using TravisCI to deploy to Heroku 
-* Add more Test scripts  
+* Build Scripts to complete
+* Test scripts to complete
 * Fix the star rating to capture rating value 
 * Add a trend chart showing the ratings 
+* Build scripts using TravisCI to deploy to Heroku 
 * Add more validation to Date and Email input fields  
-* Make the Stars customisable
-* Fix the grid view 
+* Fix the grid view to make it fitting into a smaller container. 
 * Enhance the filter criteria to search for words within a string. (e.g. search a word that appears within a comment) 
 
 ## License
-[TekBucket]
+[TekBucket] 
