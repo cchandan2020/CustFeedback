@@ -131,8 +131,8 @@ class FeedbackInsert extends Component {
                     onChange={this.handleChangeInputComment}
                 />
                 <Label>Rating: </Label>
-                    {/* <Rater total={5} rating={2} /> */}
-                    <Rater total ={5} onRate={function({rating})}/>
+                    <Rater total={5} rating={2} />
+                    {/* <Rater total ={5} onRate={function({rating})}/> */}
                     {/* <Rater total={5} rating= /> */}
                     {/* <Rater total={5} rating={2} /> */}
                     {/* value{rating} = onRate */}
