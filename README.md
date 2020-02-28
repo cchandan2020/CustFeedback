@@ -24,7 +24,7 @@ This is a SAMPLE app that is meant to demonstrate how to develop, build, test an
   engine.
 
 ### Other key tools 
-* Build Tool - Travis CI (Not fully implemented)
+* Build Tool - Webpack, Babel and Travis CI (Not fully implemented)
 * Deployment - Heroku (Not implemented yet)
 
 ## Features
@@ -66,12 +66,8 @@ $cd CustomerFeedback/server
 $node server.js
 ````
 
-## Build with TravisCI 
-```` bash
-$npm build 
-[ WORK IN progress]
-
-````
+### WebUI 
+Click on HOME to create new feedback or view old feedbacks 
 
 ## Backlog
 
