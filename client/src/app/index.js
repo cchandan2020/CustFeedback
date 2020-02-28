@@ -2,9 +2,9 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { NavBar } from '../components'
-import { FeedbackContainer, FeedbackList, FeedbackInsert } from '../pages'
+import { FeedbackContainer, RatingChart, FeedbackList, FeedbackInsert } from '../pages'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+//import RatingChart from './pages/RatingChart';
 import '../App.css';
 // import StarRating from './components/StarRating';
 

@@ -71,14 +71,12 @@ Click on HOME to create new feedback or view old feedbacks
 
 ## Backlog
 
-* Build Scripts to complete
-* Test scripts to complete
-* Fix the star rating to capture rating value 
-* Add a trend chart showing the ratings 
-* Build scripts using TravisCI to deploy to Heroku 
+* Fix Issue: New Feedback appear automatically and does not require screen refresh.
 * Add more validation to Date and Email input fields  
 * Fix the grid view to make it fitting into a smaller container. 
-* Enhance the filter criteria to search for words within a string. (e.g. search a word that appears within a comment) 
+* Enhance the filter criteria to search for words within a string
+* Deploy to Heroku using TravisCI 
+
 
 ## License
 [TekBucket] 
