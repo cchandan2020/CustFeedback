@@ -7,8 +7,7 @@ This is a SAMPLE app that is meant to demonstrate how to develop, build, test an
 
 ## Tools / libraries
 
-#### MERN stack 
-
+#### MERN STACK 
 * ##### MongoDB 
   https://www.mongodb.com/ 
   A document-based open source database, that provides you scalability 
@@ -24,7 +23,7 @@ This is a SAMPLE app that is meant to demonstrate how to develop, build, test an
   https://nodejs.org/en/  A javascript runtime built on Chrome’s V8 JS 
   engine.
 
-#### Other key tools 
+### Other key tools 
 * Build Tool - Travis CI (Not fully implemented)
 * Deployment - Heroku (Not implemented yet)
 
