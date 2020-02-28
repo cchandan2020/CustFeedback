@@ -5,16 +5,24 @@ Customer Feedback Application is a MERN stack application, dealing with collecti
 
 This is a SAMPLE app that is meant to demonstrate how to develop, build, test and deploy a MERN stack app. 
 
-## Tools / libraries 
+## Tools / libraries
+
 #### MERN stack 
 
-* MongoDB - https://www.mongodb.com/ 
-A document-based open source database, that provides you scalability and flexibility.
-* ExpressJS - https://expressjs.com/ 
-A structured base designed to develop web applications and APIs.
-* ReactJS - https://reactjs.org/ 
-A Javascript Front-end library for building user interfaces. Maintained by Facebook.
-* NodeJS - https://nodejs.org/en/  A javascript runtime built on Chrome’s V8 JS engine.
+* ##### MongoDB 
+  https://www.mongodb.com/ 
+  A document-based open source database, that provides you scalability 
+  and flexibility.
+* ##### ExpressJS 
+  https://expressjs.com/ 
+  A structured base designed to develop web applications and APIs.
+* ##### ReactJS 
+  https://reactjs.org/ 
+  A Javascript Front-end library for building user interfaces. 
+  Maintained by Facebook.
+* ##### NodeJS 
+  https://nodejs.org/en/  A javascript runtime built on Chrome’s V8 JS 
+  engine.
 
 #### Other key tools 
 * Build Tool - Travis CI (Not fully implemented)
