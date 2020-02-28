@@ -7,25 +7,37 @@ import './index.css';
 class FeedbackContainer extends Component {
     constructor(props) {
         super(props)
+        this.state = {inserted:false, feedbacks:null}
+    }
+
+    handleOnInsert(){
+        this.setState({inserted:true})
+    }
+
+    handleReloadCompleted(feedbacks){
+        this.setState({inserted:false, feedbacks:feedbacks})
+
     }
 
     render(){
         return(
             <container1>
             <div className = 'container1'>
-                <FeedbackInsert />
+                <FeedbackInsert onInsert = {this.handleOnInsert.bind(this)}/>
             </div>
 
              <div className = 'container1'>
-                <FeedbackList reload/>|
+                <FeedbackList reload = {this.state.inserted}  reloadCompleted = {this.handleReloadCompleted.bind(this)}  />
             </div> 
 
             <div className ='container1'>
-                <RatingChart />
+                <RatingChart feedbackList ={this.state.feedbacks}/>
              </div>
             </container1>
         )
        }
+
+
 
 
 }

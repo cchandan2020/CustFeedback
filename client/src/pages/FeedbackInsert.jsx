@@ -83,9 +83,6 @@ class FeedbackInsert extends Component {
 
     handleIncludeFeedback = async () => {
 
-        
-        //onRating: function({ rating })
-
         const { name, email, rating, comment, time } = this.state
         const arrayTime = time.split('/')
         const payload = { name, email,rating, comment, time: arrayTime }
@@ -103,6 +100,9 @@ class FeedbackInsert extends Component {
                 time: '',
             })
         })
+
+        this.props.onInsert()
+
     }
 
     render() {

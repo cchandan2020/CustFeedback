@@ -5,10 +5,12 @@ import {Bar} from 'react-chartjs-2';
 class RatingChart extends Component{
     constructor(props){
         super(props);
+        let data=props.feedbackList.map()
+        
         this.state = {
             chartData:{
                 labels: ['Rate 1', 'Rate 2', 'Rate 3', 'Rate 4', 'Rate 5'],
-                dataSets: [{
+                datasets: [{
                     label: 'Total',
                     data: [
                         10, 15, 20, 25, 15

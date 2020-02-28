@@ -29,26 +29,22 @@ class FeedbackList extends Component {
         
        // this.setState({ isLoading: false, feedbacks: globalCustomer })
         console.log ('This is global customer before didmount - \n',globalCustomer);
-        
-
         let gCust = globalCustomer
-
         await api.getAllFeedbacks().then(feedbacks => {
             gCust = feedbacks.data.data
-
             this.setState({
                 feedbacks: gCust,
                 isLoading: false,
             })
+            this.props.reloadCompleted()
         })
     }
 
-    // async componentWillUpdate  (){
-    //     this.setState({ 
-    //             feedbacks: globalCustomer,
-    //             isLoading: false 
-    //     })
-    // }
+    async componentWillUpdate  (){
+        if (this.props.reload){
+            this.componentDidMount()
+        }
+    }
 
     render() {
         const { feedbacks, isLoading } = this.state
