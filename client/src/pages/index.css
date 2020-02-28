@@ -1,5 +1,5 @@
 .container1{
-    border: 2px solid red;
+    border: 0.5px #eb4646;
     display: grid;
     /* grid-template-columns: 2fr 1fr 4fr;  */
     grid-template-columns: 1fr 1fr 1r ;

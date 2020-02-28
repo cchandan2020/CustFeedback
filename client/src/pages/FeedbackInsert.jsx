@@ -66,7 +66,6 @@ class FeedbackInsert extends Component {
 
         this.setState({ rating })
     }
-
     
 
     handleChangeInputComment = async event => {
@@ -106,6 +105,8 @@ class FeedbackInsert extends Component {
         //const { name, email, rating, comment, time } = this.state
         const { name, email, rating, comment } = this.state
         
+        
+
         return (
             <Wrapper>
                 <Title>Add new feedback</Title>
@@ -123,14 +124,22 @@ class FeedbackInsert extends Component {
                     value={email}
                     onChange={this.handleChangeInputEmail}
                 />
+                <Label>Comment: </Label>
+                <InputText
+                    type="text"
+                    value={comment}
+                    onChange={this.handleChangeInputComment}
+                />
                 <Label>Rating: </Label>
                     {/* <Rater total={5} rating={2} /> */}
-                    <Rater total={5} rating={2} />
-                    {/* value = {rating} */}
-
+                    <Rater total ={5} onRate={function({rating})}/>
+                    {/* <Rater total={5} rating= /> */}
+                    {/* <Rater total={5} rating={2} /> */}
+                    {/* value{rating} = onRate */}
+                    
                 <InputText
                     type="number"
-                    step="0.1"
+                    // step="0.1"
                     lang="en-US"
                     min="1"
                     max="5"
@@ -140,15 +149,9 @@ class FeedbackInsert extends Component {
                 />
 
                 {/* <Rater total={5} rating={2} /> */}
-
                 {/* <Rater onRate={({rating}) => {}}/> */}
                 <label> </label>
-                <Label>Comment: </Label>
-                <InputText
-                    type="text"
-                    value={comment}
-                    onChange={this.handleChangeInputComment}
-                />
+                
 
                 {/* <Label>Time: </Label>
                 <InputText
@@ -156,6 +159,9 @@ class FeedbackInsert extends Component {
                     value={time}
                     onChange={this.handleChangeInputTime}
                 /> */}
+                <div>
+                    
+                </div>
 
                 <Button onClick={this.handleIncludeFeedback}>Add Feedback</Button>
                 
