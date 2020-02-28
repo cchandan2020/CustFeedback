@@ -5,8 +5,6 @@ import ReactTable from 'react-table-v6'
 
 import {globalCustomer} from '../Services/global'
 
-
-
 import api from '../api'
 import styled from 'styled-components'
 import 'react-table-v6/react-table.css'
@@ -27,8 +25,6 @@ class FeedbackList extends Component {
 
     componentDidMount = async () => {
         
-       // this.setState({ isLoading: false, feedbacks: globalCustomer })
-        console.log ('This is global customer before didmount - \n',globalCustomer);
         let gCust = globalCustomer
         await api.getAllFeedbacks().then(feedbacks => {
             gCust = feedbacks.data.data
@@ -51,11 +47,7 @@ class FeedbackList extends Component {
         console.log('TCL: FeedbackList -> render -> feedbacks', feedbacks)
 
         const columns = [
-            // {
-            //     Header: 'ID',
-            //     accessor: '_id',
-            //     filterable: true,
-            // },
+            
             {
                 Header: 'Rating',
                 accessor: 'rating',
@@ -76,11 +68,7 @@ class FeedbackList extends Component {
                 accessor: 'comment',
                 filterable: true,
             },
-            // {
-            //     Header: 'Time',
-            //     accessor: 'time',
-            //     //Cell: props => <span>{props.value.join(' ./ ')}</span>,
-            // },
+            
         ]
 
         let showTable = true

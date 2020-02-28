@@ -60,15 +60,9 @@ class FeedbackInsert extends Component {
     }
 
     handleChangeInputRating = async event => {
-        // const rating = event.target.validity.valid
-        //     ? event.target.value
-        //     : this.state.rating
-        console.log(event)
         let rating = event.rating
-        
-
         this.setState({ rating })
-        console.log("This ..",rating)
+        console.log("This is value of rating ... ",rating)
     }
     
 
@@ -88,10 +82,10 @@ class FeedbackInsert extends Component {
         const payload = { name, email,rating, comment, time: arrayTime }
 
         globalCustomer.push(payload)
-        console.log('This is global customer: \n', globalCustomer)
+        console.log('This is value of globalCustomer var: \n', globalCustomer)
 
         await api.insertFeedback(payload).then(res => {
-            window.alert(`Feedback added successfully`)
+            //window.alert(`Feedback added successfully`)
             this.setState({
                 name: '',
                 email: '',
@@ -106,11 +100,9 @@ class FeedbackInsert extends Component {
     }
 
     render() {
-        //const { name, email, rating, comment, time } = this.state
+        
         const { name, email, rating, comment } = this.state
         
-        
-
         return (
             <Wrapper>
                 <Title>Add new feedback</Title>
@@ -134,39 +126,12 @@ class FeedbackInsert extends Component {
                     value={comment}
                     onChange={this.handleChangeInputComment}
                 />
+            
                 <Label>Rating: </Label>
                     <Rater total={5} rating={rating} onRate={this.handleChangeInputRating}/>
-                    
-                    {/* <Rater total ={5} onRate={function({rating})}/> */}
-                    {/* <Rater total={5} rating= /> */}
-                    {/* <Rater total={5} rating={2} /> */}
-                    {/* value{rating} = onRate */}
-                    
-                {/* <InputText
-                    type="number"
-                    // step="0.1"
-                    lang="en-US"
-                    min="1"
-                    max="5"
-                    pattern="[0-9]+([,\.][0-9]+)?"
-                    value={rating}
-                    onChange={this.handleChangeInputRating}
-                /> */}
-
-                {/* <Rater total={5} rating={2} /> */}
-                {/* <Rater onRate={({rating}) => {}}/> */}
-                <label> </label>
+                   <label> </label>
                 
-
-                {/* <Label>Time: </Label>
-                <InputText
-                    type="text"
-                    value={time}
-                    onChange={this.handleChangeInputTime}
-                /> */}
-                <div>
-                    
-                </div>
+                <div> </div>
 
                 <Button onClick={this.handleIncludeFeedback}>Add Feedback</Button>
                 

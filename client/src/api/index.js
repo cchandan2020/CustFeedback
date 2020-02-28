@@ -11,7 +11,7 @@ export const getAllFeedbacks = () => api.get(`/feedbacks`)
 const apis = {
     insertFeedback,
     getAllFeedbacks,
-    // add chart API later 
+    
 }
 
 export default apis

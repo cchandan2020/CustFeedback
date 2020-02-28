@@ -33,7 +33,6 @@ createFeedback = (req, res) => {
         })
 }
 
-// router.get('/feedback/:id', FeedbackCtrl.getFeedbackById)
 
 getFeedbackById = async (req, res) => {
     await Feedback.findOne({ _id: req.params.id }, (err, feedback) => {

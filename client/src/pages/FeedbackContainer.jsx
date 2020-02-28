@@ -37,9 +37,6 @@ class FeedbackContainer extends Component {
         )
        }
 
-
-
-
 }
 
 export default FeedbackContainer

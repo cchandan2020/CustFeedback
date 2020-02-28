@@ -55,6 +55,11 @@ $ brew tap mongodb/brew
 $ brew install mongodb-community
 $ brew services start mongodb-community
 ````
+
+Note: 
+- db is named custfeedback  
+- collection - feedbacks 
+
 ### Start the Client 
 ````
 $cd CustomerFeedback/client 

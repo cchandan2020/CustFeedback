@@ -18,10 +18,7 @@ class Links extends Component {
     render() {
         return (
             <React.Fragment>
-                {/* <Link to="/" className="navbar-brand">
-                    Customer Feedback Application 
-                    
-                </Link> */}
+                
                 <Collapse>
                     <List>
                         <Item>
